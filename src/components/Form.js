@@ -10,7 +10,7 @@ function Form (props) {
     function handleSubmit (event) {
         event.preventDefault();
 
-        if(document.getElementById('todoInput').value === !null){
+        if(document.getElementById('todoInput').value != ''){
             props.setTodoList([...props.todoList,{
                 id: new Date().getMilliseconds(),
                 task: props.singleTodo,
@@ -26,10 +26,10 @@ function Form (props) {
 
     function handleFilterChange () {
         props.setFilteredList(props.todoList.filter(todo => {
-            if (document.getElementById('filterInput').value == 'completed') {
-                return todo.completed == true;
-            } else if (document.getElementById('filterInput').value == 'uncompleted') {
-                return todo.completed == false;
+            if (document.getElementById('filterInput').value === 'completed') {
+                return todo.completed === true;
+            } else if (document.getElementById('filterInput').value === 'uncompleted') {
+                return todo.completed === false;
             } else {
                 return todo;
             }
