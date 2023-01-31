@@ -53,7 +53,7 @@ function Form (props) {
                 <select className="p-2 ms-2 glass text-dark border-0" name="filterInput" id="filterInput" onChange={handleFilterChange}>
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
+                    <option value="uncompleted">Incomplete</option>
                 </select>
             </div>
         </form>
