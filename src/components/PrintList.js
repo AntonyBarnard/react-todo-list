@@ -3,15 +3,15 @@ function PrintList (props) {
     // Functions
     function handleCompleted(event) {
         props.todoList.map(todo => {
-            if(todo.id == event.target.id) {
+            if(todo.id === event.target.id) {
                 todo.completed = !todo.completed;
             }
         })
         props.setFilteredList(props.todoList.filter(todo => {
             if (document.getElementById('filterInput').value == 'completed') {
-                return todo.completed == true;
+                return todo.completed === true;
             } else if (document.getElementById('filterInput').value == 'uncompleted') {
-                return todo.completed == false;
+                return todo.completed === false;
             } else {
                 return todo;
             }
@@ -20,7 +20,7 @@ function PrintList (props) {
 
     function handleDelete (event) {
         props.setTodoList(props.todoList.filter(todo => {
-            if(todo.id != event.target.title) {
+            if(todo.id !== event.target.title) {
                 return todo.id;
             }
         }));

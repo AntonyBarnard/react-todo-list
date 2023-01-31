@@ -10,7 +10,7 @@ function Form (props) {
     function handleSubmit (event) {
         event.preventDefault();
 
-        if(document.getElementById('todoInput').value == !null){
+        if(document.getElementById('todoInput').value === !null){
             props.setTodoList([...props.todoList,{
                 id: new Date().getMilliseconds(),
                 task: props.singleTodo,
