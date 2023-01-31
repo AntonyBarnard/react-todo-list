@@ -14,7 +14,7 @@ function App () {
     const [ filteredList, setFilteredList] = useState([]);
 
     return(
-        <div className='position-absolute start-50 translate-middle-x glass m-auto p-4 border' style={{maxWidth:'420px', top:'3%'}}>
+        <div className='container position-absolute start-50 translate-middle-x glass p-4 border' style={{maxWidth:'420px' ,top:'3%'}}>
             <Header />
             <Form
                 singleTodo={singleTodo}

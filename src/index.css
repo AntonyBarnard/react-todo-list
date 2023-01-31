@@ -23,3 +23,14 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
+
+@media only screen and (max-width: 600px) {
+    form{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    form div {
+        margin-top: 20px;
+    }
+}
