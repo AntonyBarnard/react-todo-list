@@ -13,26 +13,6 @@ function App () {
 
     const [ filteredList, setFilteredList] = useState([]);
 
-    // functions
-    function loadFromLocalStorage () {
-        setTodoList(JSON.parse(localStorage.getItem("List")));
-    }
-
-    function saveToLocalStorage () {
-        localStorage.setItem("List",JSON.stringify(todoList));
-    }
-
-    // useEffect
-    useEffect(() => {
-        loadFromLocalStorage();
-    },[]);
-
-    useEffect(() => {
-        saveToLocalStorage();
-    },[todoList, filteredList]);
-
-    
-
     return(
         <div className='position-absolute start-50 translate-middle-x glass m-auto p-4 border' style={{maxWidth:'420px', top:'3%'}}>
             <Header />
