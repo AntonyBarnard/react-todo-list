@@ -15,7 +15,7 @@ function App () {
 
     // functions
     function loadFromLocalStorage () {
-        setFilteredList(JSON.parse(localStorage.getItem("List")));
+        setTodoList(JSON.parse(localStorage.getItem("List")));
     }
 
     function saveToLocalStorage () {
@@ -29,7 +29,7 @@ function App () {
 
     useEffect(() => {
         saveToLocalStorage();
-    },[filteredList]);
+    },[todoList, filteredList]);
 
     
 
